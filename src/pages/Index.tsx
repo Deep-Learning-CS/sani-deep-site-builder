@@ -1,3 +1,4 @@
+
 import { Github, ExternalLink, Mail, Code, Database, Brain, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,6 +9,7 @@ const Index = () => {
   const { toast } = useToast();
 
   const handleViewWork = () => {
+    console.log("View Work button clicked");
     toast({
       title: "Deep Learning Course Project",
       description: "Redirecting to my comprehensive deep learning project showcasing neural networks, machine learning algorithms, and AI implementations...",
@@ -15,11 +17,13 @@ const Index = () => {
     });
     
     setTimeout(() => {
+      console.log("Opening course project URL");
       window.open('https://course-project-deep-learning.vercel.app/', '_blank');
     }, 2000);
   };
 
   const handleGithubProfile = () => {
+    console.log("GitHub Profile button clicked");
     window.open('https://github.com/Deep-Learning-CS', '_blank');
   };
 
