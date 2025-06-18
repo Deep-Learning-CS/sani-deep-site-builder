@@ -1,10 +1,28 @@
-
 import { Github, ExternalLink, Mail, Code, Database, Brain, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
+  const { toast } = useToast();
+
+  const handleViewWork = () => {
+    toast({
+      title: "Deep Learning Course Project",
+      description: "Redirecting to my comprehensive deep learning project showcasing neural networks, machine learning algorithms, and AI implementations...",
+      duration: 3000,
+    });
+    
+    setTimeout(() => {
+      window.open('https://course-project-deep-learning.vercel.app/', '_blank');
+    }, 2000);
+  };
+
+  const handleGithubProfile = () => {
+    window.open('https://github.com/Deep-Learning-CS', '_blank');
+  };
+
   const projects = [
     {
       title: "Deep Learning Projects",
@@ -51,7 +69,7 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-0 group"
-                  onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={handleViewWork}
                 >
                   View My Work
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -60,7 +78,7 @@ const Index = () => {
                   variant="outline" 
                   size="lg"
                   className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white"
-                  onClick={() => window.open('https://github.com/sanidhaya', '_blank')}
+                  onClick={handleGithubProfile}
                 >
                   <Github className="mr-2 h-4 w-4" />
                   GitHub Profile
