@@ -1,4 +1,4 @@
-import { Github, ExternalLink, Mail, Code, Database, Brain, ArrowRight } from "lucide-react";
+import { Github, ExternalLink, Mail, Code, Database, Brain, ArrowRight, Building, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,13 +10,13 @@ const Index = () => {
   const handleViewWork = () => {
     console.log("View Work button clicked");
     toast({
-      title: "Deep Learning Course Project",
-      description: "Redirecting to my comprehensive deep learning project showcasing neural networks, machine learning algorithms, and AI implementations...",
+      title: "Audio Noise Reduction using Deep Learning",
+      description: "Redirecting to my audio denoising web application showcasing machine learning models for noise reduction...",
       duration: 3000,
     });
     
     setTimeout(() => {
-      console.log("Opening course project URL");
+      console.log("Opening Audio Noise Reduction project URL");
       window.open('https://course-project-deep-learning.vercel.app/', '_blank');
     }, 2000);
   };
@@ -28,18 +28,45 @@ const Index = () => {
 
   const projects = [
     {
-      title: "Deep Learning Projects",
-      description: "Advanced machine learning and neural network implementations",
-      tech: ["Python", "TensorFlow", "PyTorch", "Deep Learning"],
-      github: "https://github.com/Deep-Learning-CS",
+      title: "Audio Noise Reduction using Deep Learning",
+      description: "Full-stack audio denoising web app integrating 3 ML models with optimized audio chunking",
+      tech: ["Python", "React", "FastAPI", "PyTorch", "DNS48"],
+      github: "https://course-project-deep-learning.vercel.app/",
       featured: true
     },
     {
-      title: "Personal Projects",
-      description: "Various software development and programming projects",
-      tech: ["JavaScript", "Python", "React", "Node.js"],
-      github: "https://github.com/sanidhaya",
+      title: "Expert System for Neurological Disorder Detection",
+      description: "Python expert system analyzing 20+ neurological symptoms for diagnostic confidence scoring",
+      tech: ["Python", "Machine Learning", "Medical AI", "Fuzzy Logic"],
+      github: "https://github.com/sanidhaya/Expert-System-for-neurological-disorder",
       featured: true
+    }
+  ];
+
+  const experience = [
+    {
+      company: "PFW",
+      role: "IT Help Desk",
+      period: "November 2024 — Present",
+      description: "Managing system configurations and security updates, ensuring compliance with organizational IT policies."
+    },
+    {
+      company: "EPAM Systems",
+      role: "Software Engineer",
+      period: "March 2024 — July 2024",
+      description: "Built 3 web applications using .NET C framework. Reduced page load time by 40% and increased user satisfaction scores by 25%."
+    },
+    {
+      company: "Telkes Technologies",
+      role: "Backend Engineer",
+      period: "November 2023 — February 2024",
+      description: "Built 5 RESTful APIs with 98.6% uptime rating. Implemented disaster recovery plan reducing system downtime from 4 hours to 30 minutes."
+    },
+    {
+      company: "Dunzo",
+      role: "Software Engineering Intern",
+      period: "January 2023 — July 2023",
+      description: "Automated 8 manual workflows using Python scripts. Built 3 internal tools for performance requests processing 300+ requests monthly."
     }
   ];
 
@@ -93,6 +120,46 @@ const Index = () => {
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent" />
+      </section>
+
+      {/* Experience Section */}
+      <section className="py-20 bg-slate-800/20">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Professional Experience</h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+              My journey in software development and technology roles
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto space-y-6">
+            {experience.map((exp, index) => (
+              <Card 
+                key={index} 
+                className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300"
+              >
+                <CardHeader>
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                    <div>
+                      <CardTitle className="text-white text-xl flex items-center gap-2">
+                        <Building className="h-5 w-5 text-blue-400" />
+                        {exp.company}
+                      </CardTitle>
+                      <p className="text-cyan-400 font-medium mt-1">{exp.role}</p>
+                    </div>
+                    <Badge className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white border-0 w-fit">
+                      <Calendar className="h-3 w-3 mr-1" />
+                      {exp.period}
+                    </Badge>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-300 leading-relaxed">{exp.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Projects Section */}
