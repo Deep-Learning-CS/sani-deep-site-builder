@@ -1,4 +1,4 @@
-import { Github, ExternalLink, Mail, Code, Database, Brain, ArrowRight, Building, Calendar } from "lucide-react";
+import { Github, ExternalLink, Mail, Code, Database, Brain, ArrowRight, Building, Calendar, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -24,6 +24,11 @@ const Index = () => {
   const handleGithubProfile = () => {
     console.log("GitHub Profile button clicked");
     window.open('https://github.com/Deep-Learning-CS', '_blank');
+  };
+
+  const handleViewResume = () => {
+    console.log("View Resume PDF button clicked");
+    window.open('/lovable-uploads/6a3bde6a-83ce-4532-966f-ea88d0bc7e50.png', '_blank');
   };
 
   const projects = [
@@ -114,6 +119,16 @@ const Index = () => {
                 >
                   <Github className="mr-2 h-4 w-4" />
                   GitHub Profile
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-slate-600 text-slate-300 bg-transparent hover:bg-slate-700 hover:text-white hover:border-slate-500 cursor-pointer transition-all duration-200"
+                  onClick={handleViewResume}
+                  type="button"
+                >
+                  <FileText className="mr-2 h-4 w-4" />
+                  View Resume PDF
                 </Button>
               </div>
             </div>
