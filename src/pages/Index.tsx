@@ -1,4 +1,5 @@
 
+
 import { Github, ExternalLink, Mail, Code, Database, Brain, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -72,8 +73,9 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-0 group"
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-0 group cursor-pointer"
                   onClick={handleViewWork}
+                  type="button"
                 >
                   View My Work
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -81,8 +83,9 @@ const Index = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white"
+                  className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white cursor-pointer"
                   onClick={handleGithubProfile}
+                  type="button"
                 >
                   <Github className="mr-2 h-4 w-4" />
                   GitHub Profile
@@ -234,16 +237,18 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-0"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-0 cursor-pointer"
                 onClick={() => window.open('https://github.com/sanidhaya', '_blank')}
+                type="button"
               >
                 <Github className="mr-2 h-5 w-5" />
                 Main GitHub
               </Button>
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0"
+                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 cursor-pointer"
                 onClick={() => window.open('https://github.com/Deep-Learning-CS', '_blank')}
+                type="button"
               >
                 <Brain className="mr-2 h-5 w-5" />
                 Deep Learning Projects
@@ -251,8 +256,9 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white"
+                className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white cursor-pointer"
                 onClick={() => window.open('mailto:your.email@example.com', '_blank')}
+                type="button"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Get In Touch
@@ -275,3 +281,4 @@ const Index = () => {
 };
 
 export default Index;
+
