@@ -1,5 +1,3 @@
-
-
 import { Github, ExternalLink, Mail, Code, Database, Brain, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -73,7 +71,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-0 group cursor-pointer"
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-0 group cursor-pointer transition-all duration-200 hover:scale-105"
                   onClick={handleViewWork}
                   type="button"
                 >
@@ -83,7 +81,7 @@ const Index = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white cursor-pointer"
+                  className="border-slate-600 text-slate-300 bg-transparent hover:bg-slate-700 hover:text-white hover:border-slate-500 cursor-pointer transition-all duration-200"
                   onClick={handleGithubProfile}
                   type="button"
                 >
@@ -281,4 +279,3 @@ const Index = () => {
 };
 
 export default Index;
-
