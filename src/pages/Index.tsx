@@ -28,7 +28,26 @@ const Index = () => {
 
   const handleViewResume = () => {
     console.log("View Resume button clicked");
-    window.open('/lovable-uploads/6a3bde6a-83ce-4532-966f-ea88d0bc7e50.png', '_blank');
+    toast({
+      title: "Resume",
+      description: "Opening resume in a new tab...",
+      duration: 2000,
+    });
+    
+    setTimeout(() => {
+      // Try the lovable upload first, fallback to a message if it fails
+      const resumeUrl = '/lovable-uploads/6a3bde6a-83ce-4532-966f-ea88d0bc7e50.png';
+      const newWindow = window.open(resumeUrl, '_blank');
+      
+      // If the window couldn't be opened or the file doesn't exist
+      if (!newWindow) {
+        toast({
+          title: "Resume Unavailable",
+          description: "Please contact me directly for my resume. Email: your.email@example.com",
+          duration: 5000,
+        });
+      }
+    }, 1000);
   };
 
   const projects = [
