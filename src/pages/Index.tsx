@@ -100,37 +100,6 @@ const Index = () => {
                 Passionate about building intelligent systems and creating innovative solutions 
                 through code. Exploring the intersection of software development and artificial intelligence.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-0 group cursor-pointer transition-all duration-200 hover:scale-105"
-                  onClick={handleViewWork}
-                  type="button"
-                >
-                  View My Work
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-slate-600 text-slate-300 bg-transparent hover:bg-slate-700 hover:text-white hover:border-slate-500 cursor-pointer transition-all duration-200"
-                  onClick={handleGithubProfile}
-                  type="button"
-                >
-                  <Github className="mr-2 h-4 w-4" />
-                  GitHub Profile
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-slate-600 text-slate-300 bg-transparent hover:bg-slate-700 hover:text-white hover:border-slate-500 cursor-pointer transition-all duration-200"
-                  onClick={handleViewResume}
-                  type="button"
-                >
-                  <FileText className="mr-2 h-4 w-4" />
-                  View Resume PDF
-                </Button>
-              </div>
             </div>
           </div>
         </div>
@@ -173,6 +142,49 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Actions Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-8">Quick Actions</h2>
+            <p className="text-lg text-slate-400 mb-12">
+              Explore my work, connect with me, or view my resume
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-0 group cursor-pointer transition-all duration-200 hover:scale-105"
+                onClick={handleViewWork}
+                type="button"
+              >
+                View My Work
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-slate-600 text-slate-300 bg-transparent hover:bg-slate-700 hover:text-white hover:border-slate-500 cursor-pointer transition-all duration-200"
+                onClick={handleGithubProfile}
+                type="button"
+              >
+                <Github className="mr-2 h-4 w-4" />
+                GitHub Profile
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-slate-600 text-slate-300 bg-transparent hover:bg-slate-700 hover:text-white hover:border-slate-500 cursor-pointer transition-all duration-200"
+                onClick={handleViewResume}
+                type="button"
+              >
+                <FileText className="mr-2 h-4 w-4" />
+                View Resume PDF
+              </Button>
+            </div>
           </div>
         </div>
       </section>
