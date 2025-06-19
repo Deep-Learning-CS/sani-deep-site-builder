@@ -106,46 +106,6 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent" />
       </section>
 
-      {/* Experience Section */}
-      <section className="py-20 bg-slate-800/20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Professional Experience</h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              My journey in software development and technology roles
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto space-y-6">
-            {experience.map((exp, index) => (
-              <Card 
-                key={index} 
-                className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300"
-              >
-                <CardHeader>
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                    <div>
-                      <CardTitle className="text-white text-xl flex items-center gap-2">
-                        <Building className="h-5 w-5 text-blue-400" />
-                        {exp.company}
-                      </CardTitle>
-                      <p className="text-cyan-400 font-medium mt-1">{exp.role}</p>
-                    </div>
-                    <Badge className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white border-0 w-fit">
-                      <Calendar className="h-3 w-3 mr-1" />
-                      {exp.period}
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-300 leading-relaxed">{exp.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Quick Actions Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -185,6 +145,46 @@ const Index = () => {
                 View Resume PDF
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="py-20 bg-slate-800/20">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Professional Experience</h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+              My journey in software development and technology roles
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto space-y-6">
+            {experience.map((exp, index) => (
+              <Card 
+                key={index} 
+                className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300"
+              >
+                <CardHeader>
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                    <div>
+                      <CardTitle className="text-white text-xl flex items-center gap-2">
+                        <Building className="h-5 w-5 text-blue-400" />
+                        {exp.company}
+                      </CardTitle>
+                      <p className="text-cyan-400 font-medium mt-1">{exp.role}</p>
+                    </div>
+                    <Badge className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white border-0 w-fit">
+                      <Calendar className="h-3 w-3 mr-1" />
+                      {exp.period}
+                    </Badge>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-300 leading-relaxed">{exp.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
