@@ -368,7 +368,7 @@ const Index = () => {
                 variant="outline" 
                 size="lg"
                 className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white cursor-pointer"
-                onClick={() => window.open('mailto:your.email@example.com', '_blank')}
+                onClick={() => window.open('mailto:sanidhaya08112001@gmail.com', '_blank')}
                 type="button"
               >
                 <Mail className="mr-2 h-5 w-5" />
