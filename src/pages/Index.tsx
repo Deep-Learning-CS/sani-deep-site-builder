@@ -110,7 +110,7 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-8">Quick Actions</h2>
+            <h2 className="text-4xl font-bold text-white mb-8">Checkout my work</h2>
             <p className="text-lg text-slate-400 mb-12">
               Explore my work, connect with me, or view my resume
             </p>
