@@ -27,7 +27,7 @@ const Index = () => {
   };
 
   const handleViewResume = () => {
-    console.log("View Resume PDF button clicked");
+    console.log("View Resume button clicked");
     window.open('/lovable-uploads/6a3bde6a-83ce-4532-966f-ea88d0bc7e50.png', '_blank');
   };
 
@@ -142,7 +142,7 @@ const Index = () => {
                 type="button"
               >
                 <FileText className="mr-2 h-4 w-4" />
-                View Resume PDF
+                View Resume
               </Button>
             </div>
           </div>
